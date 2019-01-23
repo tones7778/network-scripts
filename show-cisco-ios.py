@@ -18,9 +18,11 @@ def cisco_sw03(username, password):
 
     net_connect = ConnectHandler(**cisco_device)
 
-    output = net_connect.send_command('show ip int brief', use_textfsm=True)
+    show_ip_int = net_connect.send_command('show ip int brief', use_textfsm=True)
+    show_version = net_connect.send_command('show version', use_textfsm=True)
 
-    pprint.pprint(output)
+    pprint.pprint(show_version)
+    pprint.pprint(show_ip_int)
 
 if __name__ == "__main__":
     cisco_sw03('tones', getpass())
