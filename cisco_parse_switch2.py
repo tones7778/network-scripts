@@ -13,7 +13,11 @@ def main():
     logging.warning('-----------------------Start logging-----------------------------')
 
     # Template file and TextFSM index
-    os.environ["NET_TEXTFSM"] = "/home/tones/code/network-python/ntc-templates/templates"
+    os.environ["NET_TEXTFSM"] = "/home/XXXXXX/code/network-python/ntc-templates/templates"
+    
+    # Template file and TextFSM index -- Windows path --
+    os.environ["NET_TEXTFSM"] = "C:\\DATA\\XXXXXXX\\code\\git_automation_projects\\devnet\\ntc-templates\\templates"
+
     mypass = getpass()
 
     with open('cisco_switches_inventory.txt') as f:
